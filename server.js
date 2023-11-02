@@ -1,13 +1,13 @@
 const express = require('express')
 const cheerio = require('cheerio')
 const puppeteer = require('puppeteer')
-const port = 3002
+const port = 8080
 
 const app = express()
 
 // Добавьте заголовки CORS
 app.use((req, res, next) => {
-	res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000')
+	res.setHeader('Access-Control-Allow-Origin', 'https://astron.co.ua')
 	res.setHeader(
 		'Access-Control-Allow-Methods',
 		'GET, POST, OPTIONS, PUT, PATCH, DELETE'
