@@ -15,6 +15,7 @@ app.use((req, res, next) => {
 
 app.use('/', (req, res) => {
     try {
+			return {hello: 'world'}
         // Ваш код без Puppeteer, например, можно заменить его на заглушку
         // res.json({ data: "Здесь был код Puppeteer, но теперь его нет" });
     } catch (error) {
