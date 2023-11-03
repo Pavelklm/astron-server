@@ -5,18 +5,14 @@ const port = 3002
 
 const app = express()
 
-// Добавьте заголовки CORS
 app.use((req, res, next) => {
-	res.setHeader('Access-Control-Allow-Origin', 'https://pahanklm.github.io')
-	res.setHeader(
-		'Access-Control-Allow-Methods',
-		'GET, POST, OPTIONS, PUT, PATCH, DELETE'
-	)
-	res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type')
-	res.setHeader('Access-Control-Allow-Credentials', true)
+	res.setHeader('Access-Control-Allow-Origin', '*'); // Разрешение доступа с любых доменов
+	res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+	res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With, content-type');
+	res.setHeader('Access-Control-Allow-Credentials', true);
 
-	next()
-})
+	next();
+});
 
 app.use('/', async (req, res) => {
 	try {
