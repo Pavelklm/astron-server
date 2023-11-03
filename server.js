@@ -32,16 +32,16 @@ app.use('/', async (req, res) => {
 		}
 
 		// // Используем evaluate для выполнения скрипта на странице
-		// const extractedData1 = await page.evaluate(() => {
-		// 	const elementsWithClass = document.querySelectorAll('.d4r55')
-		// 	const data = []
+		const extractedData1 = await page.evaluate(() => {
+			const elementsWithClass = document.querySelectorAll('.d4r55')
+			const data = []
 
-		// 	elementsWithClass.forEach(element => {
-		// 		data.push(element.textContent)
-		// 	})
+			elementsWithClass.forEach(element => {
+				data.push(element.textContent)
+			})
 
-		// 	return data
-		// })
+			return data
+		})
 
 		// // Извлекаем массив с классом "rsqaWe"
 		// const extractedData2 = await page.evaluate(() => {
