@@ -81,6 +81,7 @@ app.use('/', async (req, res) => {
 	} catch (error) {
 		console.error(error)
 		res.status(500).send('Ошибка при выполнении запроса')
+		return 'lol'
 	}
 })
 
