@@ -7,7 +7,7 @@ const app = express()
 
 // Добавьте заголовки CORS
 app.use((req, res, next) => {
-	res.setHeader('Access-Control-Allow-Origin', 'https://astron.co.ua')
+	res.setHeader('Access-Control-Allow-Origin', 'https://pahanklm.github.io')
 	res.setHeader(
 		'Access-Control-Allow-Methods',
 		'GET, POST, OPTIONS, PUT, PATCH, DELETE'
