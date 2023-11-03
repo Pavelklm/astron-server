@@ -22,8 +22,59 @@ app.use('/', async (req, res) => {
 		const browser = await puppeteer.launch()
 		const page = await browser.newPage()
 		await page.goto(url, { waitUntil: 'domcontentloaded' })
-
 		res.json({ message: 'Привет' });
+
+		// Ждем и кликаем на кнопку "Більше відгуків" с классом "M77dve" до тех пор, пока она не исчезнет
+		// let moreButton
+		// while ((moreButton = await page.$('.M77dve'))) {
+		// 	await moreButton.click()
+		// 	await page.waitForTimeout(900) // Ждем немного после клика
+		// }
+
+		// // Используем evaluate для выполнения скрипта на странице
+		// const extractedData1 = await page.evaluate(() => {
+		// 	const elementsWithClass = document.querySelectorAll('.d4r55')
+		// 	const data = []
+
+		// 	elementsWithClass.forEach(element => {
+		// 		data.push(element.textContent)
+		// 	})
+
+		// 	return data
+		// })
+
+		// // Извлекаем массив с классом "rsqaWe"
+		// const extractedData2 = await page.evaluate(() => {
+		// 	const elementsWithClass = document.querySelectorAll('.rsqaWe')
+		// 	const data = []
+
+		// 	elementsWithClass.forEach(element => {
+		// 		data.push(element.textContent)
+		// 	})
+
+		// 	return data
+		// })
+
+		// // Извлекаем третий массив
+		// const extractedData3 = await page.evaluate(() => {
+		// 	const elementsWithClass = document.querySelectorAll('.MyEned')
+		// 	const data = []
+
+		// 	elementsWithClass.forEach(element => {
+		// 		data.push(element.textContent)
+		// 	})
+
+		// 	return data
+		// })
+
+		// await browser.close()
+
+		// // Отправляем все три массива данных на клиентскую сторону
+		// res.json({
+		// 	data1: extractedData1,
+		// 	data2: extractedData2,
+		// 	data3: extractedData3,
+		// })
 	} catch (error) {
 		console.error(error)
 		res.status(500).send('Ошибка при выполнении запроса')
