@@ -75,7 +75,7 @@ app.use('/', async (req, res) => {
 			data3: extractedData3,
 		})
 
-		res.json({ message: 'Привет' });
+		// res.json({ message: 'Привет' });
 
 	} catch (error) {
 		console.error(error)
