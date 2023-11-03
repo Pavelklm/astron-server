@@ -21,6 +21,7 @@ app.use('/', async (req, res) => {
 
 		const browser = await puppeteer.launch()
 		const page = await browser.newPage()
+		await page.goto(url, { waitUntil: 'domcontentloaded' })
 
 		res.json({ message: 'Привет' });
 	} catch (error) {
