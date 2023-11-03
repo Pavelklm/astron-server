@@ -25,11 +25,11 @@ app.use('/', async (req, res) => {
 		res.json({ message: 'Привет' });
 
 		// Ждем и кликаем на кнопку "Більше відгуків" с классом "M77dve" до тех пор, пока она не исчезнет
-		// let moreButton
-		// while ((moreButton = await page.$('.M77dve'))) {
-		// 	await moreButton.click()
-		// 	await page.waitForTimeout(900) // Ждем немного после клика
-		// }
+		let moreButton
+		while ((moreButton = await page.$('.M77dve'))) {
+			await moreButton.click()
+			await page.waitForTimeout(900) // Ждем немного после клика
+		}
 
 		// // Используем evaluate для выполнения скрипта на странице
 		// const extractedData1 = await page.evaluate(() => {
