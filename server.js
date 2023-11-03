@@ -22,7 +22,6 @@ app.use('/', async (req, res) => {
 		const browser = await puppeteer.launch()
 		const page = await browser.newPage()
 		await page.goto(url, { waitUntil: 'domcontentloaded' })
-		res.json({ message: 'Привет' });
 
 		// Ждем и кликаем на кнопку "Більше відгуків" с классом "M77dve" до тех пор, пока она не исчезнет
 		let moreButton
@@ -75,6 +74,9 @@ app.use('/', async (req, res) => {
 			data2: extractedData2,
 			data3: extractedData3,
 		})
+
+		res.json({ message: 'Привет' });
+
 	} catch (error) {
 		console.error(error)
 		res.status(500).send('Ошибка при выполнении запроса')
