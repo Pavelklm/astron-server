@@ -43,38 +43,38 @@ app.use('/', async (req, res) => {
 			return data
 		})
 
-		// // Извлекаем массив с классом "rsqaWe"
-		// const extractedData2 = await page.evaluate(() => {
-		// 	const elementsWithClass = document.querySelectorAll('.rsqaWe')
-		// 	const data = []
+		// Извлекаем массив с классом "rsqaWe"
+		const extractedData2 = await page.evaluate(() => {
+			const elementsWithClass = document.querySelectorAll('.rsqaWe')
+			const data = []
 
-		// 	elementsWithClass.forEach(element => {
-		// 		data.push(element.textContent)
-		// 	})
+			elementsWithClass.forEach(element => {
+				data.push(element.textContent)
+			})
 
-		// 	return data
-		// })
+			return data
+		})
 
-		// // Извлекаем третий массив
-		// const extractedData3 = await page.evaluate(() => {
-		// 	const elementsWithClass = document.querySelectorAll('.MyEned')
-		// 	const data = []
+		// Извлекаем третий массив
+		const extractedData3 = await page.evaluate(() => {
+			const elementsWithClass = document.querySelectorAll('.MyEned')
+			const data = []
 
-		// 	elementsWithClass.forEach(element => {
-		// 		data.push(element.textContent)
-		// 	})
+			elementsWithClass.forEach(element => {
+				data.push(element.textContent)
+			})
 
-		// 	return data
-		// })
+			return data
+		})
 
-		// await browser.close()
+		await browser.close()
 
-		// // Отправляем все три массива данных на клиентскую сторону
-		// res.json({
-		// 	data1: extractedData1,
-		// 	data2: extractedData2,
-		// 	data3: extractedData3,
-		// })
+		// Отправляем все три массива данных на клиентскую сторону
+		res.json({
+			data1: extractedData1,
+			data2: extractedData2,
+			data3: extractedData3,
+		})
 	} catch (error) {
 		console.error(error)
 		res.status(500).send('Ошибка при выполнении запроса')
