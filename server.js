@@ -15,7 +15,7 @@ app.use((req, res, next) => {
 
 app.use('/', async (req, res) => {
   try {
-    const url = 'http://www.google.com/maps/place/"АСТРОН"+ПЕЧАТКИ+ШТАМПИ/@49.0609627,33.4066144,16z/data=!4m6!3m5!1s0x40d753261b91eb75:0x9e7824fc7654ecc1!8m2!3d49.0609409!4d33.4077034!16s%2Fg%2F1vc80b9l?hl=uk&entry=ttu';
+    const url = 'https://www.google.com/maps/place/"АСТРОН"+ПЕЧАТКИ+ШТАМПИ/@49.0609627,33.4066144,16z/data=!4m6!3m5!1s0x40d753261b91eb75:0x9e7824fc7654ecc1!8m2!3d49.0609409!4d33.4077034!16s%2Fg%2F1vc80b9l?hl=uk&entry=ttu';
 
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
