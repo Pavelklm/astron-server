@@ -72,4 +72,4 @@ const app = express()
 
 app.listen(5001,() => console.log('5001'))
 
-app.get('/',)
+app.get('/', (req,res) => res.json('nfsdlkjdflk'))
