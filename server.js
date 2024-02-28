@@ -1,6 +1,5 @@
 const express = require('express');
 const puppeteer = require('puppeteer');
-const port = 80;
 
 const app = express();
 
@@ -60,6 +59,6 @@ app.use('/', async (req, res) => {
   }
 });
 
-app.listen(port, () => {
-  console.log(`Прокси-сервер запущен на порту ${port}`);
+app.listen(() => {
+  console.log('Прокси-сервер запущен на порту по умолчанию');
 });
