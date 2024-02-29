@@ -88,7 +88,7 @@ app.use('/', async (req, res) => {
     await page.click('.WpHeLc');
     // await page.waitForTimeout(1000);
     // await page.click('.xyexD');
-    // await page.waitForTimeout(1000);
+    await page.waitForTimeout(1000);
     await page.type('input[type="email"]', 'pahanklm01@gmail.com');
 
 
