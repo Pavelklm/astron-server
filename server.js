@@ -90,7 +90,7 @@ app.use('/', async (req, res) => {
     await browser.close();
 
     // Отправляем содержимое страницы на клиентскую сторону
-    res.send(console.log(pageContent));
+    res.send(pageContent);
   } catch (error) {
     console.error(error);
     res.status(500).send('Ошибка при выполнении запроса');
