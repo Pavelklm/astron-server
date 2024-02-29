@@ -106,3 +106,8 @@ app.use('/', async (req, res) => {
     res.status(500).send('Ошибка при выполнении запроса');
   }
 });
+
+
+app.listen(port, () => {
+  console.log(`Прокси-сервер запущен на порту ${port}`);
+});
