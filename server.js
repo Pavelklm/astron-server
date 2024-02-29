@@ -85,10 +85,7 @@ app.use('/', async (req, res) => {
     await page.goto(url, { waitUntil: 'domcontentloaded' });
 
     // Нажимаем на кнопку с классом "WpHeLc"
-    await page.click('.s1EFBf');
-    await page.waitForTimeout(1000); // Даем время для загрузки после нажатия кнопки
-    await page.click('.VfPpkd-LgbsSe');
-    await page.waitForTimeout(1000); // Даем время для загрузки после нажатия кнопки
+
 
     // Получаем содержимое всей страницы после нажатия кнопки
     const pageContent = await page.content();
