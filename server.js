@@ -79,8 +79,6 @@ app.use((req, res, next) => {
 
 app.use('/', async (req, res) => {
   try {
-    console.log('Запрос получен');
-
     const url = 'https://www.google.com/maps/place/"АСТРОН"+ПЕЧАТКИ+ШТАМПИ/@49.0609627,33.4066144,16z/data=!4m6!3m5!1s0x40d753261b91eb75:0x9e7824fc7654ecc1!8m2!3d49.0609409!4d33.4077034!16s%2Fg%2F1vc80b9l?hl=uk&entry=ttu';
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
@@ -88,11 +86,13 @@ app.use('/', async (req, res) => {
 
     // Нажимаем на кнопку с классом "WpHeLc"
     await page.click('.WpHeLc');
-    console.log('Кнопка нажата');
-
+    // await page.waitForTimeout(1000);
+    // await page.click('.xyexD');
     await page.waitForTimeout(1000);
-    await page.type('.xyezD', 'pahanklm01@gmail.com');
-    console.log('Email введен');
+    await page.type('input[type="email"]', 'pahanklm01@gmail.com');
+    await page.click('.WpHeLc');
+
+
 
     // Получаем содержимое всей страницы после нажатия кнопки
     const pageContent = await page.content();
@@ -106,7 +106,6 @@ app.use('/', async (req, res) => {
     res.status(500).send('Ошибка при выполнении запроса');
   }
 });
-
 
 app.listen(port, () => {
   console.log(`Прокси-сервер запущен на порту ${port}`);
