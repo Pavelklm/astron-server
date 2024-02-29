@@ -86,7 +86,7 @@ app.use('/', async (req, res) => {
 
     // Нажимаем на кнопку с классом "WpHeLc"
     await page.click('.WpHeLc');
-    await page.waitForTimeout(1000);
+    // await page.waitForTimeout(1000);
     // await page.click('.xyexD');
     // await page.waitForTimeout(1000);
     // await page.type('pahanklm01@gmail.com');
