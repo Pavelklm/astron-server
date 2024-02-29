@@ -87,7 +87,7 @@ app.use('/', async (req, res) => {
     // Нажимаем на кнопку с классом "WpHeLc"
     await page.click('.WpHeLc');
     await page.waitForTimeout(3000);
-    await page.type('input.xyexD', 'pahanklm01@gmail.com');
+    await page.type('xyexD', 'pahanklm01@gmail.com');
 
 
     // Получаем содержимое всей страницы после нажатия кнопки
